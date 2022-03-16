@@ -1,0 +1,391 @@
+:root {
+
+--black: #000000ff;
+--malachite: #1ed760ff;
+--denim-blue: #2941abff;
+--snow: #fffafbff;
+--beau-blue: #bdd5eaff;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+	max-width: 100vw;
+	min-height: 100vh;
+  	display: flex;
+  	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.home {
+	background: linear-gradient(135deg, var(--malachite) 0%, var(--denim-blue) 100%);
+}
+
+nav {
+	background-color: var(--black);
+	position: sticky;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	color: white;
+	height: 4em;
+	gap: 5px;
+}
+
+.nav-links {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	list-style: none;
+}
+
+.footer {
+	width: 100%;
+	align-self: flex-end;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--black);
+	color: var(--snow);
+	height: 3em;
+}
+
+.links {
+	max-height: 2.5em;
+	max-width: 20%;
+	padding: 0 20px;
+	border: solid 0px;
+	border-radius: 20px;
+	background-color: var(--malachite);
+	color: white;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	height: 60%;
+}
+
+.links:hover {
+	background-color: var(--snow);
+	color: var(--malachite);
+}
+
+.pages {
+	max-width: 100vw;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.shop {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin: 10px 0;
+	gap: 20px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.routes {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+}
+
+.smallItemImage {
+	max-height: 200px;
+	max-width: 200px;
+}
+
+.smallItems {
+	display: flex;
+	gap: 1px;
+	flex-direction: column;
+	align-items: center;
+	width: 300px;
+	border: solid 1px rgba(0, 0, 0, 0.507);
+	border-radius: 10px;
+}
+
+.smallItems > *, .smallItems > * > *, .smallTextArea > *, .smallTextArea > * > * {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+.smallImageDiv {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 250px;
+	border-bottom: solid rgba(0, 0, 0, 0.507) 1px;
+}
+
+.smallTextArea {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 150px;
+	max-width: 250px;
+}
+
+.smallLink {
+	color: black;
+}
+
+.addToBasketButton {
+	transition: all .2s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 2em;
+	border: none;
+	border-radius: 15px;
+	background-color: black;
+	color: var(--snow);
+}
+
+.addToBasketButton:hover, .homepageButton:hover {
+	background-color: var(--malachite);
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.homepageImage {
+	border: solid 5px var(--snow);
+	border-radius: 25px;
+	width: auto;
+	height: 350px;
+}
+
+.home {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+}
+
+.homeHeader {
+	font-size: 68px
+}
+
+.homepageText {
+	color: var(--snow);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 400px;
+	height: 350px;
+	text-align: end;
+}
+
+.homepageButton {
+	transition: all .2s ease-in-out;
+	width: 100%;
+	color: var(--snow);
+	background-color: black;
+	border: none;
+	border-radius: 30px;
+	height: 2em;
+	font-size: 20px;
+}
+
+.itemDetailsPage {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.itemDetailsImage {
+	height: 400px;
+
+}
+
+.itemDetailsImageContainer {
+	width: 50%;
+}
+
+.itemDetailsTextContainer {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+}
+
+.itemDetailsTextContainer > * {
+	width: 80%;
+}
+
+.itemDetailsTextContainer > button {
+	width: 150px;
+}
+
+.basketItem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	margin: 20px 20%;
+	padding: 30px 0px;
+}
+
+.basketItem::after {
+	align-self: center;
+  content: "";
+  background: black;
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+}
+
+.basketItemImageContainer {
+	height: 100px
+}
+
+.basketImage {
+	height: 100px;
+}
+
+.quantityArea {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.quantityArea > button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	border: none;
+	background-color: black;
+	color: var(--snow);
+}
+
+.quantityArea > button:hover {
+	background-color: var(--malachite);
+	cursor: pointer;
+}
+
+.total {
+	align-self: flex-end;
+	margin-right: 20%;
+}
+
+
+.basketHeader {
+	margin-top: 10px;
+}
+
+.basketPrice {
+	margin-right: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.home {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.home > * {
+		max-width: 75%;
+	}
+
+	.homepageText > * {
+		text-align: center;
+	}
+
+	.homeHeader {
+		text-align: center;
+		font-size: 3em;
+	}
+
+	.homepageButton {
+		display: none;
+	}
+
+	.homepageImage {
+		max-width: 75%;
+		margin-top: 10px;
+		height: auto;
+	}
+	nav {
+		justify-content: center;
+	}
+	.nav-links {
+		justify-content: none;
+	}
+
+	.links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 900;
+		text-align: center;
+		font-size: 0.75em;
+		padding: 5px 12px;
+	}
+	.shop {
+		margin: 10px 0;
+	}
+	body {
+		max-height: 100vh;
+	}
+
+	.itemDetailsPage {
+		margin: 10px 0px;
+		flex-direction: column;
+		align-items: center;
+	}
+	.itemDetailsImage {
+		width: 75%;
+		height: auto;
+	}
+	.itemDetailsTextContainer {
+		width: 90%;
+		align-items: center;
+		text-align: center;
+	}
+	.basketItem {
+		margin: 10%;
+		padding-bottom: 15px;
+	}
+	.basketItemTitle {
+		height: 1em;
+		overflow: auto;
+	}
+}
